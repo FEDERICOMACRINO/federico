@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+<style>
+    }
+.buttonRosso{
+    background-color: rgb(211, 41, 41);
+}
+.buttonVerde{
+    background-color: rgb(12, 161, 37);
+}
+.buttonblu{
+    background-color: rgb(36, 20, 177);
+}
+.buttongiallo{
+    background-color: rgb(238, 241, 21);
+}
+.buttonarancione{
+    background-color: rgb(236, 132, 12);
+}
+</style>
+</head>
+<body>
+
+ <button class="bottonerosso"  onclick="document.getElementById('myImage').src='federico.jpg'">porta AND</button>
+<button class="bottoneverde"  onclick="document.getElementById('myImage').src='not.jpg'">porta NOT</button>
+<button class="bottoneblu"  onclick="document.getElementById('myImage').src='nor.png'">porta NOR</button>
+<button class="bottonearancione" onclick="document.getElementById('myImage').src='or.jpg'">porta OR</button>
+<button class="bottonegiallo"  onclick="document.getElementById('myImage').src='nand.png'">porta NAND</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+</body>
+</html>
