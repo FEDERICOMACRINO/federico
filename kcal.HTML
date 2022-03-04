@@ -4,11 +4,18 @@
 <h1>grammi in calorie </h1>
 <form id="frm1" >
  METTERE grassi: <input type="text" name="Hbase" value="0"><br>
- VALORE CALORIE:<input type="text" name="Harrivo" value="0"><br>
+ VALORE proteine:<input type="text" name="Harrivo" value="0"><br>
  VALORE CArboidrato:<input type="text" name="Hsomma" value="0"><br>
 
 </form>
 <style>
+    
+
+    body{
+font-size: 25px;
+background-color: rgb(230, 247, 0);
+    }
+
     .ul {
     padding: 0;
     list-style-type: none;
@@ -53,11 +60,6 @@ ul li:nth-child(even):hover {
     transform: perspective(300px) rotateY(-45deg);
     padding-right: 5%;
 }
-#miodiv{
-    background-color: rgb(31, 8, 240);
-    height: 400px;
-    
-}
 
 
 </style>
@@ -67,22 +69,19 @@ ul li:nth-child(even):hover {
 <li><button class="button" onclick="myFunction()" class="ul"> converti in kcal</button></li> 
 </ul>
 
-<ul>
-<li><button class="button" onclick="ckal()" class="ul"> converti calorie</button></li> 
-</ul>
-
 
 <p>grassi:</p>
 <p id="base"></p>
-<p>calorie:</p>
+<p>proteine:</p>
 <p id="arrivo"></p>
 <p>carboidrati:</p>
 <p id="somma"></p>
 
-grassi in ckal
+conversione
 <p id="demo"></p>
-carboidrati in calorie
 <p id="demi"></p>
+<p id="dema"></p>
+
 <script>
 function myFunction() {
 
@@ -94,28 +93,27 @@ document.getElementById("base").innerHTML =base;
 var arrivo=x.elements[1].value;
 document.getElementById("arrivo").innerHTML =arrivo;
 
-document.getElementById("demo").innerHTML =Dislivello(base,arrivo);
- 
-}
-function ckal(){
-
-    
-var x = document.getElementById("frm1");
-
 var somma=x.elements[2].value;
 document.getElementById("somma").innerHTML =somma;
 
-var arrivo=x.elements[1].value;
-document.getElementById("arrivo").innerHTML =arrivo;
 
-document.getElementById("demi").innerHTML =altezza(somma,arrivo);
+document.getElementById("demo").innerHTML =Dislivello(base);
+
+document.getElementById("demi").innerHTML =kcal(arrivo);
+
+document.getElementById("dema").innerHTML =proteine(somma);
+
+ 
 }
 
-function Dislivello(numero1,numero2){
-return numero1*numero2;
+function Dislivello(numero1,){
+return numero1*9;
 }
-function altezza(numero2,numero3){
-return numero2*numero3;
+function kcal(numero2){
+return numero2*4;
+}
+function proteine(numero3){
+return numero3*4;
 }
 
 </script>
