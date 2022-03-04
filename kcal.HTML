@@ -9,13 +9,10 @@
 
 </form>
 <style>
-    
 
-    body{
-font-size: 25px;
-background-color: rgb(230, 247, 0);
+    body {
+background-color: yellow;
     }
-
     .ul {
     padding: 0;
     list-style-type: none;
@@ -62,6 +59,7 @@ ul li:nth-child(even):hover {
 }
 
 
+
 </style>
 <div id="miodiv">
 <p>CALORIE E GRASSI:</p>
@@ -81,6 +79,7 @@ conversione
 <p id="demo"></p>
 <p id="demi"></p>
 <p id="dema"></p>
+<p id="demu"></p>
 
 <script>
 function myFunction() {
@@ -103,17 +102,22 @@ document.getElementById("demi").innerHTML =kcal(arrivo);
 
 document.getElementById("dema").innerHTML =proteine(somma);
 
+document.getElementById("demu").innerHTML =grassi(somma);
+
  
 }
 
 function Dislivello(numero1,){
-return numero1*9;
+return numero4=numero1*9;
 }
 function kcal(numero2){
-return numero2*4;
+return numero5=numero2*4;
 }
 function proteine(numero3){
-return numero3*4;
+return numero6=numero3*4;
+}
+function grassi(numero1,numero2,numero3){
+return numero6+numero5+numero4;
 }
 
 </script>
