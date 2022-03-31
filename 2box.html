@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>DUE DIV</title>
+
+<style>
+.CasellaDaSpostare
+    {
+    	left:0px;	 
+        top:0px;
+        position:absolute;
+    	border: 5px solid black;
+        height: 100px;
+        width: 100px;	
+    }
+    #divBlu
+    {
+        background-color: blue;	
+    }
+    
+    #divGiallo
+    {
+        background-color: yellow;	
+    }
+</style>
+
+
+<script type="text/javascript">
+mioIntervallo=setInterval(startCountDown, 3000);
+        let countdown=10;
+        let ContaPixel=0;
+
+        let Baseblu=0;
+        let Destrablu=0;
+        let Altezzagiallo=0;
+        let Sinistragiallo=0;
+      
+        let Basegiallo=0;
+        let Destragiallo=0;
+        let Altezzablu=0;
+        let Sinistrablu=0;
+		function startCountDown() {
+		    ContaPixel=parseInt(Math.random()*300);
+		  
+		    document.getElementById("divBlu").style.left=ContaPixel+ "px";
+		    Destrablu=ContaPixel+100;
+		    Destragiallo=ContaPixel+100; 
+		    ContaPixel=parseInt(Math.random()*300);
+            document.getElementById("divBlu").style.top=ContaPixel+ "px";
+            Baseblu=ContaPixel+100;
+            Basegiallo=ContaPixel+100;
+            ContaPixel=parseInt(Math.random()*300);
+          
+            document.getElementById("divGiallo").style.left=ContaPixel+ "px";
+            Sinistragiallo=ContaPixel;
+            Sinistrablu=ContaPixel; 
+            ContaPixel=parseInt(Math.random()*300);
+            document.getElementById("divGiallo").style.top=ContaPixel+ "px";
+            Altezzagiallo=ContaPixel;
+            Altezzablu=ContaPixel; 
+	       	countdown--;
+            if((Baseblu>Altezzagiallo && Destrablu>Sinistragiallo) || (Basegiallo>Altezzablu && Destragiallo>Sinistrablu))
+            {
+                document.getElementById("divBlu").style.backgroundColor= "red";
+                document.getElementById("divGiallo").style.backgroundColor= "red";
+            }
+            else
+            {
+                document.getElementById("divBlu").style.backgroundColor= "blue";
+                document.getElementById("divGiallo").style.backgroundColor= "yellow";
+            }
+		}
+		
+</script>
+
+</head>
+
+<body>
+<div class="CasellaDaSpostare" id="divBlu">
+    </div>
+<div class="CasellaDaSpostare" id="divGiallo">
+    </div>
+</body>
+</html>
