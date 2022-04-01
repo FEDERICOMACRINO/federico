@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+      .ul {
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    ul li {
+        box-sizing: border-box;
+        width: 15em;
+        height: 3em;
+        font-size: 20px;
+        border-radius: 0.5em;
+        margin: 0.5em;
+        box-shadow: 0 0 1em rgba(0,0,0,0.2);
+        color: white;
+        font-family: sans-serif;
+        text-transform: capitalize;
+        line-height: 3em;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    
+    ul li:nth-child(odd) {
+        background: linear-gradient(to right,rgb(255, 153, 0), rgb(216, 18, 150));
+        text-align: left;
+        padding-left: 10%;
+        transform: perspective(500px) rotateY(45deg);
+    }
+    
+    ul li:nth-child(even) {
+        background: linear-gradient(to left, orange, tomato);
+        text-align: right;
+        padding-right: 10%;
+        transform: perspective(500px) rotateY(-45deg);
+    }
+    
+    ul li:nth-child(odd):hover {
+        transform: perspective(700px) rotateY(45deg);
+        padding-left: 5%;
+    }
+    
+    ul li:nth-child(even):hover {
+        transform: perspective(200px) rotateY(-45deg);
+        padding-right: 5%;
+    }
+    
+    
+    
+    
+     </style>
+     <body>
+        <ul>
+            <li> <a type="button" class="btn btn-outline-danger" href="https://federicomacrino.github.io/federico/tabelline.html">tabelline</a></button></li>
+            
+            
+          </ul>
+            
+          <ul>
+            <li><a type="button" class="btn btn-outline-danger" href="https://federicomacrino.github.io/federico/bottonebello.html">bottone</a></button></li>
+            </ul>  
+          <ul>
+            <li> <a type="button" class="btn btn-outline-danger" href="https://federicomacrino.github.io/federico/conto%20alla%20rovescia.html">coutdown</a></button></li>
+            
+            
+          </ul>  
+</body>
+</html>
